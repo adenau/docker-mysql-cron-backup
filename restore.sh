@@ -9,7 +9,7 @@ fi
 
 echo "=> Restore database from $1"
 set -o pipefail
-if gunzip --stdout "$1" | mysql -h "$MYSQL_HOST" -P "$MYSQL_PORT" -u "$MYSQL_USER" -p"$MYSQL_PASS"
+if gunzip --stdout "$1" | mysql -h "$MYSQL_HOST" -P "$MYSQL_PORT" -u "$MYSQL_USER" -p"$MYSQL_PASS" --max_allowed_packet=512M
 then
     echo "=> Restore succeeded"
 else
