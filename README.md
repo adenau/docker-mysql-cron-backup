@@ -1,4 +1,6 @@
-[![Build Status](https://travis-ci.org/fradelg/docker-mysql-cron-backup.svg?branch=master)](https://travis-ci.org/fradelg/docker-mysql-cron-backup)
+Note
+The original version of this container can be found here [https://github.com/fradelg/docker-mysql-cron-backup].
+I only added --max_allowed_packet=512M to various mysql script to function with my databases.
 
 # mysql-cron-backup
 
